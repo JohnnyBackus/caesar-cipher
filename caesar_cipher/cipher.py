@@ -29,7 +29,7 @@ def decrypt (encrypted_input, key):
 
 
 def crack(encrypted_input):
-    for i in range(1, 26):
+    for i in range(26):
         decrypted_input = decrypt(encrypted_input, i)
         if validate_words(decrypted_input): #checks if truthy
             return f"Message cracked: {decrypted_input}"
