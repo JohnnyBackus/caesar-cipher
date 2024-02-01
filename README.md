@@ -9,7 +9,9 @@
 - [CodeFellows Python Lab Instructions](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/)
 - [CodeFellows README template](https://codefellows.github.io/code-401-python-guide/reference/submission-instructions/labs/README-template.html)
 - lecture demo code used for reference
-- Used GitHub CoPilot for...
+  - duplicated corpus_loader.py demo code without alteration
+- ChatGPT not needed for today's lab
+- CoPilot used for some syntax corrections
 
 ### Setup
 
@@ -25,7 +27,7 @@
 
 #### Tests
 
+- use pytest for tests
 - tests are located at file path tests/test_caesar_cipher.py
 - tests provided by lab instructions
-  - created one new test for key > 26
-- ...
+  - created one new encryption test for key > 26
