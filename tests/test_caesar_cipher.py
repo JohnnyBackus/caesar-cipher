@@ -1,5 +1,6 @@
-from caesar_cipher.cipher import encrypt, decrypt
+from caesar_cipher.cipher import encrypt, decrypt, crack
 
+# TODO: make a test for key > 26
 
 def test_encrypt_shift_1():
     actual = encrypt("apple", 1)
@@ -46,17 +47,17 @@ def test_round_trip():
     assert actual == expected
 
 
-# def test_crack_phrase():
-#     phrase = "It was the best of times, it was the worst of times."
-#     encrypted = encrypt(phrase, 10)
-#     actual = crack(encrypted)
-#     expected = phrase
-#     assert actual == expected
+def test_crack_phrase():
+    phrase = "It was the best of times, it was the worst of times."
+    encrypted = encrypt(phrase, 10)
+    actual = crack(encrypted)
+    expected = phrase
+    assert actual == expected
 
 
-# def test_crack_nonsense():
-#     phrase = "Ix fhw txe fofg of ndhrl, it nad tho hndrk of allkd."
-#     encrypted = encrypt(phrase, 10)
-#     actual = crack(encrypted)
-#     expected = ""
-#     assert actual == expected
+def test_crack_nonsense():
+    phrase = "Ix fhw txe fofg of ndhrl, it nad tho hndrk of allkd."
+    encrypted = encrypt(phrase, 10)
+    actual = crack(encrypted)
+    expected = ""
+    assert actual == expected
